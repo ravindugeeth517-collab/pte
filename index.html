@@ -143,7 +143,47 @@
         .btn-secondary:hover {
             background-color: rgba(255, 255, 255, 0.1);
         }
-        
+        @media (max-width: 576px) {
+    .hero {
+        padding: 130px 0 60px;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    /* Fix for mobile buttons */
+    .hero .btn {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        padding: 14px 20px;
+        font-size: 0.95rem;
+        text-align: center;
+    }
+    
+    .hero .btn-secondary {
+        margin-left: 0;
+    }
+    
+    .contact-form {
+        padding: 30px 20px;
+    }
+}
+
+/* Also add this for medium screens if buttons still look cramped */
+@media (max-width: 768px) {
+    .hero .btn {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        padding: 12px 25px;
+    }
+    
+    .hero .btn-secondary {
+        margin-left: 0;
+    }
+}
         /* Section Styling */
         section {
             padding: 80px 0;
