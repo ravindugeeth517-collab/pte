@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTE Masterclass | Expert PTE Tutoring</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .logo span {
+            color: #3498db;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #3498db;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #2c3e50;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 180px 0 100px;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid white;
+            margin-left: 10px;
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background-color: #3498db;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* About Tutor */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .qualifications {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 1.5rem 0;
+        }
+        
+        .qualifications span {
+            background-color: #e8f4fc;
+            color: #3498db;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        /* Posts/Testimonials */
+        .posts {
+            background-color: #f5f7fa;
+        }
+        
+        .testimonial-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial-info h4 {
+            margin-bottom: 5px;
+        }
+        
+        .testimonial-info p {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        .rating {
+            color: #f39c12;
+            margin-bottom: 15px;
+        }
+        
+        /* Post Gallery Section */
+        .post-gallery {
+            background-color: white;
+        }
+        
+        .gallery-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+        
+        .filter-btn {
+            padding: 8px 20px;
+            background-color: #f1f8ff;
+            border: none;
+            border-radius: 30px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn.active, .filter-btn:hover {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .post-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .post-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .post-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .post-card:hover .post-image img {
+            transform: scale(1.05);
+        }
+        
+        .post-content {
+            padding: 25px;
+        }
+        
+        .post-category {
+            display: inline-block;
+            background-color: #e8f4fc;
+            color: #3498db;
+            padding: 5px 12px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .post-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .post-excerpt {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .post-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #888;
+            font-size: 0.85rem;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+        
+        .post-date {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .read-more {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: gap 0.3s;
+        }
+        
+        .read-more:hover {
+            gap: 10px;
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            background-color: white;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: #3498db;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-column p {
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: #3498db;
+            transform: translateY(-3px);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #3498db;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+        
+        /* Success Message */
+        .success-message {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        /* Floating Action Buttons */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 58px;
+            height: 58px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            text-decoration: none;
+        }
+
+        .whatsapp-float i {
+            font-size: 1.9rem;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-float:hover i {
+            transform: scale(1.2);
+        }
+
+
+        /* Modal for Post Details */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .modal-content {
+            background-color: white;
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            border-radius: 8px;
+            padding: 40px;
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #2c3e50;
+        }
+        
+        .modal-post-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image, .about-text {
+                width: 100%;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                padding: 30px 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 130px 0 60px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .contact-form {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Learn PTE From  <span> Jeewanthi</span></div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Tutor</a></li>
+                    <li><a href="#posts">Student Success</a></li>
+                    <li><a href="#gallery">PTE Tips & Strategies</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Achieve Your PTE Goals with Expert Tutoring</h1>
+            <p>Get personalized coaching from a certified PTE instructor with 10+ years of experience. Improve your score with proven strategies and practice materials.</p>
+            <a href="#contact" class="btn">Book a Free Trial Class</a>
+            <a href="#about" class="btn btn-secondary">Learn About Our Tutor</a>
+        </div>
+    </section>
+
+    <!-- About Tutor Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Your PTE Tutor</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="02.png" alt="PTE Tutor">
+                </div>
+                <div class="about-text">
+                    <h3>Meet Jeewanthi Marasinghe, Your PTE Expert</h3>
+                    <p>With over a decade of experience in PTE coaching, I have helped more than 2,000 students achieve their target scores for study, work, and migration purposes.</p>
+                    <p>My teaching methodology focuses on identifying individual weaknesses and transforming them into strengths through customized lesson plans, realistic mock tests, and proven test-taking strategies.</p>
+                    
+                    <div class="qualifications">
+                        <span>PTE Certified Trainer</span>
+                        <span>10+ Years Experience</span>
+                        <span>IELTS 8.5 Band</span>
+                        <span>MA in English Linguistics</span>
+                        <span>2,000+ Students Trained</span>
+                        <span>90% Success Rate</span>
+                    </div>
+                    
+                   <p>My students consistently achieve scores of 79+ in all modules, with many reaching the perfect 90. I specialize in helping students overcome specific challenges in speaking, writing, reading, and listening modules.</p>
+                    
+                    <br>
+
+                    <div>
+                        <a href="#contact" class="btn">Schedule a Consultation</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Posts/Testimonials Section -->
+    <section class="posts" id="posts">
+        <div class="container">
+            <div class="section-title">
+                <h2>Student Success Stories</h2>
+            </div>
+            <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Student">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Sarah Chen</h4>
+                            <p>Scored 88 in PTE</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"John's speaking strategies completely transformed my approach. I went from 65 to 88 in just 4 weeks. His feedback on pronunciation and fluency was invaluable."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Student">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Raj Patel</h4>
+                            <p>Scored 90 in PTE</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"I needed 79 in all modules for my Australian visa. John's writing templates and time management techniques helped me achieve a perfect 90. Highly recommended!"</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="Student">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Maria Gonzalez</h4>
+                            <p>Scored 84 in PTE</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"The listening and reading strategies John taught me were game-changers. I was struggling with multiple-choice questions, but his techniques helped me improve significantly."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Post Gallery Section -->
+    <section class="post-gallery" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>PTE Tips & Strategies</h2>
+                <p>Explore our collection of PTE tips, strategies, and success stories</p>
+            </div>
+            
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All Posts</button>
+                <button class="filter-btn" data-filter="speaking">Speaking</button>
+                <button class="filter-btn" data-filter="writing">Writing</button>
+                <button class="filter-btn" data-filter="reading">Reading</button>
+                <button class="filter-btn" data-filter="listening">Listening</button>
+                <button class="filter-btn" data-filter="tips">Study Tips</button>
+            </div>
+            
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Posts will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Book Your Free Trial Class</h2>
+                <p>Fill out the form below and we'll contact you within 24 hours to schedule your free trial session.</p>
+            </div>
+            
+            <div class="success-message" id="successMessage">
+                Thank you for your interest! We have received your information and will contact you within 24 hours.
+            </div>
+            
+            <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Migration Country</label>
+                        <select id="country" name="country">
+                            <option value="">Select Country</option>
+                            <option value="India">Australia</option>
+                            <option value="China">UK</option>
+                            <option value="Philippines">Canada</option>
+                            <option value="Brazil">New Zeeland</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pteScore"> Score Needed</label>
+                    <input type="text" id="pteScore" name="pteScore" placeholder="e.g., 65 overall or 70/65/72/68">
+                </div>
+                
+                
+                
+                <div class="form-group">
+                    <label for="message">Remarks</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell us about your goals, challenges, and preferred schedule..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn" style="width: 100%;">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Learn PTE from Jeewanthi</h3>
+                    <p>Expert PTE tutoring with proven strategies to help you achieve your target score for study, work, or migration purposes.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Tutor</a></li>
+                        <li><a href="#posts">Student Success</a></li>
+                        <li><a href="#gallery">PTE Tips & Strategies</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> info@learnptefromjeewanthi.com</li>
+                        <li><i class="fas fa-phone"></i> +94 71 777 1787</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Online Classes Worldwide</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9AM - 9PM (GMT)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Learn PTE from Jeewanthi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+
+    <!-- Modal for Post Details -->
+    <div class="modal" id="postModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <img class="modal-post-image" id="modalImage" src="" alt="Post Image">
+            <div class="post-category" id="modalCategory"></div>
+            <h3 id="modalTitle"></h3>
+            <div class="post-meta">
+                <div class="post-date">
+                    <i class="far fa-calendar"></i> <span id="modalDate"></span>
+                </div>
+                <div class="post-date">
+                    <i class="far fa-clock"></i> <span id="modalReadTime"></span> read
+                </div>
+            </div>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- FLOATING ACTION BUTTONS -->
+    <a href="https://wa.me/94717771787" class="whatsapp-float" target="_blank" aria-label="Contact on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <!--<div class="cookie-float" aria-label="Privacy Settings"><i class="fas fa-cookie-bite"></i></div>-->
+    
+  <script>
+    // IMPORTANT: Replace this with your actual Web App URL from Google Apps Script
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzCgVWpxKkykzwMxeUfNedNwoyeJXMjJAmTzt1hInI1zhg15rIOMvqdcIs1VXVexnNMYA/exec'; // Paste your deployment URL here
+
+    // Post data for the gallery
+    const posts = [
+        {
+            id: 1,
+            title: "Mastering PTE Speaking: 5 Tips for Fluency",
+            excerpt: "Learn how to improve your fluency and pronunciation in the speaking section with these proven techniques.",
+            category: "speaking",
+            image: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
+            date: "May 15, 2023",
+            readTime: "5 min",
+            content: "<p>PTE Speaking requires a combination of fluency, pronunciation, and content. Many students struggle with maintaining a natural flow while speaking under time pressure. Here are 5 key strategies:</p><ul><li><strong>Use the preparation time wisely:</strong> Don't try to write a full sentence. Instead, note down keywords that will guide your response.</li><li><strong>Focus on smooth delivery:</strong> Avoid unnatural pauses and filler words like 'um', 'ah', or 'you know'.</li><li><strong>Pay attention to word stress:</strong> English is a stress-timed language. Practice stressing the correct syllables in multi-syllable words.</li><li><strong>Master the 5-paragraph response structure:</strong> Introduction, three main points with examples, and a conclusion.</li><li><strong>Record and analyze your practice:</strong> Listen back to identify areas for improvement in pronunciation and fluency.</li></ul><p>With consistent practice using these techniques, you can significantly improve your speaking score.</p>"
+        },
+        {
+            id: 2,
+            title: "PTE Writing Templates That Work",
+            excerpt: "Discover the essay and summarize written text templates that have helped students score 79+.",
+            category: "writing",
+            image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80",
+            date: "June 2, 2023",
+            readTime: "7 min",
+            content: "<p>The writing section in PTE Academic consists of two tasks: Summarize Written Text and Write Essay. Many students lose points not because of poor English, but because of structural issues. Here are templates that work:</p><h4>Summarize Written Text Template</h4><p>The text discusses [main topic] and explains that [key point 1]. Additionally, it mentions [key point 2] and concludes that [main conclusion].</p><h4>Essay Template (Introduction)</h4><p>The issue of [essay topic] has generated considerable debate in recent years. While some argue that [one perspective], others contend that [opposite perspective]. This essay will discuss both viewpoints before concluding that [your position].</p><h4>Essay Template (Body Paragraphs)</h4><p>First and foremost, [first argument]. For example, [specific example]. This demonstrates that [explanation]. Furthermore, [second argument]. A case in point is [specific example], which illustrates [explanation].</p><h4>Essay Template (Conclusion)</h4><p>In conclusion, while [acknowledge counter-argument], the preponderance of evidence suggests that [restate your position]. Therefore, [final thought or recommendation].</p><p>Practice these templates with different topics to build flexibility while maintaining structure.</p>"
+        },
+        {
+            id: 3,
+            title: "Reading Strategies for Multiple Choice Questions",
+            excerpt: "Learn how to quickly identify key information in reading passages to answer questions accurately.",
+            category: "reading",
+            image: "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+            date: "April 28, 2023",
+            readTime: "6 min",
+            content: "<p>The PTE Reading section tests your ability to comprehend academic texts and answer various question types. Multiple-choice questions can be particularly challenging due to time constraints. Here are effective strategies:</p><h4>1. Skim First, Read Questions Second</h4><p>Don't read the entire passage word-for-word initially. Instead, quickly skim to get the main idea and structure. Then read the questions to know what information to look for.</p><h4>2. Identify Keywords</h4><p>Underline keywords in both the questions and answer choices. Look for these keywords or their synonyms in the passage.</p><h4>3. Eliminate Wrong Answers</h4><p>PTE often includes distractors - answer choices that seem correct but aren't. Eliminate options that are:</p><ul><li>Too extreme (words like 'always', 'never', 'all', 'none')</li><li>Contradicted by the passage</li><li>Not mentioned in the passage</li><li>Only partially correct</li></ul><h4>4. Pay Attention to Transition Words</h4><p>Words like 'however', 'therefore', 'in contrast', and 'consequently' signal important relationships between ideas.</p><h4>5. Practice Time Management</h4><p>Allocate no more than 2 minutes per multiple-choice question. If you're stuck, make an educated guess and move on.</p><p>Regular practice with academic texts will improve both your speed and accuracy.</p>"
+        },
+        {
+            id: 4,
+            title: "Improving Listening Skills for PTE",
+            excerpt: "Techniques to enhance your listening comprehension and note-taking abilities.",
+            category: "listening",
+            image: "https://images.unsplash.com/photo-1545696563-af8f6ec2295a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1113&q=80",
+            date: "May 10, 2023",
+            readTime: "8 min",
+            content: "<p>The PTE Listening section evaluates your ability to understand spoken English in academic contexts. With various accents and fast-paced audio, this section can be challenging. Here's how to improve:</p><h4>1. Develop Effective Note-Taking</h4><p>Create your own shorthand system for common words. Focus on capturing:</p><ul><li>Key nouns and verbs</li><li>Numbers, dates, and statistics</li><li>Contrasting ideas (use arrows or symbols)</li><li>Cause-effect relationships</li></ul><h4>2. Practice with Different Accents</h4><p>PTE includes British, American, Australian, and non-native accents. Expose yourself to podcasts, lectures, and news from different English-speaking regions.</p><h4>3. Predict Content</h4><p>Before the audio starts, look at any images or titles provided. Predict what vocabulary and topics might appear.</p><h4>4. Focus on Signal Words</h4><p>Speakers use certain words to indicate important information:</p><ul><li>Emphasis: 'important', 'crucial', 'significant'</li><li>Examples: 'for instance', 'such as', 'like'</li><li>Conclusion: 'therefore', 'thus', 'in conclusion'</li><li>Contrast: 'however', 'on the other hand', 'although'</li></ul><h4>5. Summarize Spoken Text Strategy</h4><p>For this task, focus on the main idea and 2-3 supporting points. Your summary should be one sentence (5-75 words) that captures the essence of the audio.</p><p>Daily listening practice with academic content is essential for improving your PTE listening score.</p>"
+        },
+        {
+            id: 5,
+            title: "Time Management for PTE Success",
+            excerpt: "Learn how to allocate your time effectively across all PTE sections to maximize your score.",
+            category: "tips",
+            image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1168&q=80",
+            date: "June 18, 2023",
+            readTime: "4 min",
+            content: "<p>Effective time management is crucial for PTE success. Many students know the material but run out of time, which negatively impacts their scores. Follow this time allocation strategy:</p><h4>Speaking Section (77-93 minutes)</h4><ul><li>Read Aloud: 30-35 seconds preparation, 30-40 seconds response</li><li>Repeat Sentence: 3-5 seconds preparation, respond immediately</li><li>Describe Image: 25 seconds preparation, 40 seconds response</li><li>Re-tell Lecture: 10 seconds preparation, 40 seconds response</li><li>Answer Short Question: Respond within 10 seconds</li></ul><h4>Writing Section (40-60 minutes)</h4><ul><li>Summarize Written Text: Read (2-3 minutes), Write (8-10 minutes)</li><li>Write Essay: Plan (5 minutes), Write (15 minutes), Review (5 minutes)</li></ul><h4>Reading Section (32-41 minutes)</h4><ul><li>Multiple Choice: 2 minutes per question</li><li>Re-order Paragraphs: 3-4 minutes</li><li>Fill in the Blanks: 1.5-2 minutes each</li></ul><h4>Listening Section (45-57 minutes)</h4><ul><li>Summarize Spoken Text: Listen (60-90 seconds), Write (10 minutes)</li><li>Multiple Choice: 1-2 minutes after listening</li><li>Fill in the Blanks: 30 seconds after listening</li><li>Highlight Correct Summary: 1-2 minutes after listening</li></ul><p>Practice with a timer to internalize these time limits. During the actual test, keep an eye on the countdown timer and adjust your pace accordingly.</p>"
+        },
+        {
+            id: 6,
+            title: "Common Mistakes in PTE Speaking & How to Avoid Them",
+            excerpt: "Identify and correct the most frequent errors students make in the speaking section.",
+            category: "speaking",
+            image: "https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+            date: "July 5, 2023",
+            readTime: "6 min",
+            content: "<p>Even advanced English speakers can make simple mistakes that lower their PTE speaking scores. Here are the most common errors and how to avoid them:</p><h4>1. Speaking Too Fast or Too Slow</h4><p>The ideal speaking rate is 140-160 words per minute. Speaking too fast can cause pronunciation issues, while speaking too slow suggests poor fluency.</p><h4>2. Inconsistent Volume</h4><p>Maintain a consistent volume throughout your response. Don't trail off at the end of sentences.</p><h4>3. Overcorrecting Mistakes</h4><p>If you make a small error, continue speaking. Don't stop to correct yourself unless it significantly changes your meaning.</p><h4>4. Running Out of Content</h4><p>Practice expanding your responses with examples and explanations. For Describe Image, systematically cover: introduction, key features, comparisons, and conclusion.</p><h4>5. Poor Microphone Technique</h4><p>Position the microphone 2-3 cm from your mouth, slightly to the side to avoid 'pops' from plosive sounds (p, b, t).</p><h4>6. Not Using the Full Time</h4><p>For tasks like Describe Image and Re-tell Lecture, use the entire 40 seconds. Stopping early can negatively impact your content score.</p><h4>7. Memorized Responses</h4><p>The PTE system can detect memorized content. While templates are helpful, adapt them to the specific question.</p><p>Record your practice sessions and listen for these common mistakes. With awareness and targeted practice, you can eliminate them from your speaking responses.</p>"
+        }
+    ]; 
+
+    const logo = document.querySelector('.logo');
+    if (logo) {
+        logo.style.cursor = 'pointer';
+        logo.addEventListener('click', () => {
+            window.location.href = window.location.origin + window.location.pathname;
+        });
+    }
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+            ? '<i class="fas fa-times"></i>' 
+            : '<i class="fas fa-bars"></i>';
+    });
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+    });
+    
+    // Initialize Post Gallery
+    function initializeGallery() {
+        const galleryGrid = document.getElementById('galleryGrid');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        
+        // Render all posts initially
+        renderPosts(posts);
+        
+        // Add event listeners to filter buttons
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                // Filter posts
+                const filter = button.getAttribute('data-filter');
+                const filteredPosts = filter === 'all' 
+                    ? posts 
+                    : posts.filter(post => post.category === filter);
+                
+                // Render filtered posts
+                renderPosts(filteredPosts);
+            });
+        });
+    }
+    
+    // Render posts to the gallery
+    function renderPosts(postsToRender) {
+        const galleryGrid = document.getElementById('galleryGrid');
+        galleryGrid.innerHTML = '';
+        
+        postsToRender.forEach(post => {
+            const postCard = document.createElement('div');
+            postCard.className = 'post-card';
+            postCard.setAttribute('data-category', post.category);
+            
+            postCard.innerHTML = `
+                <div class="post-image">
+                    <img src="${post.image}" alt="${post.title}">
+                </div>
+                <div class="post-content">
+                    <span class="post-category">${post.category.charAt(0).toUpperCase() + post.category.slice(1)}</span>
+                    <h3 class="post-title">${post.title}</h3>
+                    <p class="post-excerpt">${post.excerpt}</p>
+                    <div class="post-meta">
+                        <div class="post-date">
+                            <i class="far fa-calendar"></i> ${post.date}
+                        </div>
+                        <a href="#" class="read-more" data-id="${post.id}">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            `;
+            
+            galleryGrid.appendChild(postCard);
+        });
+        
+        // Add event listeners to "Read More" links
+        document.querySelectorAll('.read-more').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const postId = parseInt(link.getAttribute('data-id'));
+                openPostModal(postId);
+            });
+        });
+    }
+    
+    // Open post modal
+    function openPostModal(postId) {
+        const post = posts.find(p => p.id === postId);
+        if (!post) return;
+        
+        document.getElementById('modalImage').src = post.image;
+        document.getElementById('modalImage').alt = post.title;
+        document.getElementById('modalCategory').textContent = post.category.charAt(0).toUpperCase() + post.category.slice(1);
+        document.getElementById('modalTitle').textContent = post.title;
+        document.getElementById('modalDate').textContent = post.date;
+        document.getElementById('modalReadTime').textContent = post.readTime;
+        document.getElementById('modalContent').innerHTML = post.content;
+        
+        document.getElementById('postModal').style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    }
+    
+    // Close post modal
+    document.getElementById('closeModal').addEventListener('click', () => {
+        document.getElementById('postModal').style.display = 'none';
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
+    });
+    
+    // Close modal when clicking outside content
+    document.getElementById('postModal').addEventListener('click', (e) => {
+        if (e.target === document.getElementById('postModal')) {
+            document.getElementById('postModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    // Form submission to Google Sheets
+    const contactForm = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+    
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Disable submit button to prevent double submission
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting...';
+        
+        // Get form data
+        const formData = {
+            name: document.getElementById('fullName').value,
+            phone: document.getElementById('phone').value,
+            email: document.getElementById('email').value,
+            country: document.getElementById('country').value,
+            scoreNeeded: document.getElementById('pteScore').value,
+            remarks: document.getElementById('message').value
+        };
+        
+        try {
+            // Send data to Google Sheets
+            const response = await fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors', // Important for Google Apps Script
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+            
+            // Since we're using no-cors mode, we assume success if no error is thrown
+            console.log('Form data sent to Google Sheets:', formData);
+            
+            // Show success message
+            successMessage.style.display = 'block';
+            
+            // Scroll to success message
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Reset form after 5 seconds
+            setTimeout(() => {
+                contactForm.reset();
+                successMessage.style.display = 'none';
+            }, 5000);
+            
+            // Optional: Send WhatsApp notification
+            // sendWhatsAppNotification(formData);
+            
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            alert('There was an error submitting your form. Please try again or contact us directly via WhatsApp at +94 71 777 1787.');
+        } finally {
+            // Re-enable submit button
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalBtnText;
+        }
+    });
+    
+    // Optional: Function to send WhatsApp notification
+    function sendWhatsAppNotification(formData) {
+        const message = `New PTE Lead:
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Country: ${formData.country}
+Score Needed: ${formData.scoreNeeded}
+Remarks: ${formData.remarks}`;
+        
+        const whatsappURL = `https://wa.me/94717771787?text=${encodeURIComponent(message)}`;
+        // Uncomment the line below if you want to automatically open WhatsApp
+        // window.open(whatsappURL, '_blank');
+    }
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if(targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if(targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Initialize the gallery when page loads
+    document.addEventListener('DOMContentLoaded', initializeGallery);
+</script>
+</body>
+</html>
